@@ -9,6 +9,10 @@ import Horarios from "./pages/Horarios";
 import Eventos from "./pages/Eventos";
 import Contato from "./pages/Contato";
 import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
+import AdminMembros from "./pages/AdminMembros";
+import AdminAgenda from "./pages/AdminAgenda";
+import AdminAvisos from "./pages/AdminAvisos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +30,10 @@ const App = () => (
           <Route path="/eventos" element={<Eventos />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/membros" element={<AdminMembros />} />
+          <Route path="/admin/agenda" element={<AdminAgenda />} />
+          <Route path="/admin/avisos" element={<AdminAvisos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

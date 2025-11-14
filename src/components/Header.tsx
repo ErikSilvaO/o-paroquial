@@ -42,6 +42,13 @@ export const Header = () => {
           >
             Contato
           </NavLink>
+          <NavLink
+            to="/admin"
+            className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted rounded-md transition-colors"
+            activeClassName="text-primary bg-secondary"
+          >
+            Admin
+          </NavLink>
         </nav>
 
         <Button asChild className="bg-accent hover:bg-accent/90">
