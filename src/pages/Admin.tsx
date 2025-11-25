@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Calendar, FileText, TrendingUp } from "lucide-react";
+import { NavLink } from "@/components/NavLink";
+import { Users, Calendar, FileText, TrendingUp, Bell, Clock } from "lucide-react";
 
 const Admin = () => {
   const stats = [
@@ -69,6 +70,60 @@ const Admin = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Management Cards */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Gerenciamento</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <NavLink to="/admin/membros">
+              <Card className="hover:border-primary transition-colors cursor-pointer">
+                <CardHeader>
+                  <Users className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Membros</CardTitle>
+                  <CardDescription>
+                    Gerenciar cadastro de membros
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/admin/agenda">
+              <Card className="hover:border-primary transition-colors cursor-pointer">
+                <CardHeader>
+                  <Calendar className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Agenda Paroquial</CardTitle>
+                  <CardDescription>
+                    Criar e gerenciar eventos
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/admin/avisos">
+              <Card className="hover:border-primary transition-colors cursor-pointer">
+                <CardHeader>
+                  <Bell className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Mural de Avisos</CardTitle>
+                  <CardDescription>
+                    Gerenciar comunicados e notícias
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/admin/horarios">
+              <Card className="hover:border-primary transition-colors cursor-pointer">
+                <CardHeader>
+                  <Clock className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Horários</CardTitle>
+                  <CardDescription>
+                    Gerenciar horários semanais
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </NavLink>
+          </div>
         </div>
 
         {/* Recent Activity */}
